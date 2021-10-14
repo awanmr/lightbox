@@ -1,0 +1,172 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'comic sans ms';
+}
+h1 {
+    font-size: 70px;
+    text-align: center;
+    margin: 4% 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.container {
+    max-width: 700px;
+    margin: auto;
+    background-color: #455d7a;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+    padding: 1%;
+    box-sizing: border-box;
+}
+.container,
+img {
+    border-radius: 5px;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+li {
+    max-width: 150px;
+    list-style: none;
+}
+img {
+    width: 100%;
+}
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: .3s;
+}
+.overlay:target {
+    position: fixed;
+    background-color: rgba(69, 93, 122, .8);
+    top: 0;
+    width: auto;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.overlay:target img {
+    max-width: 600px;
+    animation: snap .3s;
+}
+.overlay:target a {
+    text-decoration: none;
+    color: #455d7a;
+    background-color: white;
+    padding: 0 4px;
+    border-radius: 5px;
+    animation: snap .3s;
+}
+@keyframes snap {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@media (max-width:765px) {
+    .container {
+        width: 90%;
+    }
+    ul {
+        flex-direction: column;
+    }
+    li {
+        min-width: 100%;
+    }
+    .overlay {
+        display: none;
+    }
+}
